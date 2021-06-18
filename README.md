@@ -100,7 +100,7 @@ g++ --std=c++11 -I./include -L./lib demo.cpp -lgtest
 
 在当前目录下创建我们的工程mygooletest，新建 include文件夹，新建 ktest.h 头文件
 
-```C+
+```C++
 #ifndef _KTEST_H
 #define _KTEST_H
 
