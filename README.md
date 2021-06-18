@@ -70,16 +70,16 @@ int main() {
 ```
 (base) shengtangtang@MacBook-Pro 001---C++ % vim makefile
 ```
-![](assets/16232017917423.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/1.jpg)
 
-然后 make 一下, 生成 a.out文件
+然后 make 
 ```
 (base) shengtangtang@MacBook-Pro 001---C++ % make        
 g++ --std=c++11 -I./include -L./lib demo.cpp -lgtest
 ```
 运行 a.out
 
-![](assets/16232018994572.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/2.jpg)
 
 
 
@@ -190,11 +190,11 @@ int RUN_ALL_TESTS() {
 #endif
 ```
 然后新建 makefile 文件，里面写入编译规则
-![](assets/16232448496546.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/3.jpg)
 
 运行结果：
 
-![](assets/16232448761783.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/4.jpg)
 
 ## 基于类实现
 在当前目录下创建我们的工程mygoogletest2，新建 include文件夹，新建 ctest.h 头文件
@@ -363,7 +363,7 @@ int main() {
 
 编译运行：
 
-![](assets/16240060910762.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/5.jpg)
 
 
 
@@ -435,11 +435,11 @@ int main() {
 }
 ```
 在 makefile 文件中 加入对此文件的编译
-![](assets/16232871116842.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/6.jpg)
 
 然后运行，可以看出结果正确
 
-![](assets/16232871458164.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/7.jpg)
 
 C++ STL的Sort排序，面对大数据时，使用快速排序，对大数据进行分区。分为多个组后，组间有序，组内无序，然后在每组内对小规模数据进行插入排序的时间复杂度可达到O(N)，
 在 Sort中设置了一个递归深度控制，当当前快速排序的层数过深后，直接改成堆排序，
@@ -567,7 +567,7 @@ int main() {
 
 优化过后的快速排序性能比较
 
-![](assets/16232890395847.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/8.jpg)
 
 最终版本的快速排序
 ```C++
@@ -737,7 +737,7 @@ int main() {
     return RUN_ALL_TESTS();
 }
 ```
-![](assets/16232899349399.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/9.jpg)
 
 
 # 框架分析
@@ -762,7 +762,7 @@ int main() {
 }
 ```
 
-![](assets/16238913799651.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/10.jpg)
 
 从 2个测试套件中运行6个测试样例，
 **Global test environment set-up**： 初始化环境
@@ -824,8 +824,8 @@ INSTANTIATE_TEST_SUITE_P(TrueReturn, IsPrimeParamTest, testing::Values(3, 5, 11,
 
 编译运行后：
 
-![](assets/16238933006591.jpg)
-![](assets/16238933132207.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/11.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/12.jpg)
 
 
 
@@ -893,7 +893,7 @@ int main(int argc, char **argv)
     return RUN_ALL_TESTS(); 
 } 
 ```
-![](assets/16239355370717.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/13.jpg)
 
 
 
@@ -933,7 +933,7 @@ protected:
 ```
 改写好之后，我们再看一下运行结果。这两个函数分别是在本TestSuite中的第一个TestCase之前和最后一个TestCase之后执行
 
-![](assets/16239357527016.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/14.jpg)
 
  
  
@@ -1029,7 +1029,7 @@ int main(int argc, char **argv)
     return RUN_ALL_TESTS(); 
 } 
 ```  
-![](assets/16239359236403.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/15.jpg)
 
 
 如何选择事件：
@@ -1039,7 +1039,7 @@ int main(int argc, char **argv)
 
 ## 3. 死亡测试
 死亡测试是用来检测测试程序是否按照预期的方式崩溃
-![](assets/16239351805229.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/16.jpg)
 ```C++
 
 #include <iostream>
@@ -1062,7 +1062,7 @@ int main(int argc, char **argv)
 ```
 上面这个例子就是死亡测试，其运行结果如下，这里需要注意的是test_case_name如果使用DeathTest为后缀，gTest会优先运行。
 
-![](assets/16239352435659.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/17.jpg)
 
 
 
@@ -1117,7 +1117,7 @@ void IsPrimeTest_Negative_Test::TestBody() {
 - TEST宏展开后，是一个继承自testing::Test的类
 - 我们在TEST宏里面写的测试代码，其实是被放到了类的TestBody方法中
 - 通过静态变量`test_info_`，调用`MakeAndRegisterTestInfo`对测试案例进行注册
-![](assets/16239104399867.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/18.jpg)
 
 
 
@@ -1176,7 +1176,7 @@ gtest.h 中
               test_suite_name, test_name)>);                                  \
   void GTEST_TEST_CLASS_NAME_(test_suite_name, test_name)::TestBody()
 ```
-![](assets/16239109387060.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/19.jpg)
 
 这就是 TEST宏运行时的调用过程
 
@@ -1303,7 +1303,7 @@ void AddTestInfo(internal::SetUpTestSuiteFunc set_up_tc,
 我们看到，TestCase对象出来了，并通过AddTestInfo添加了一个TestInfo对象。这时，似乎豁然开朗了
 - TEST宏中的两个参数，第一个参数testcase_name，就是TestCase对象的名称，第二个参数test_name就是Test对象的名称。而TestInfo包含了一个测试案例的一系列信息
 - 一个TestCase对象对应一个或多个TestInfo对象
-  ![](assets/16239130041338.jpg)
+  ![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/20.jpg)
 我们来看看TestCase的创建过程(UnitTestImpl::GetTestCase)：
 ```C++
 // Finds and returns a TestSuite with the given name.  If one doesn't
@@ -2083,7 +2083,7 @@ void Test::Run() {
 ```
 
 ### 框架图
-![](assets/16239344570881.jpg)
+![](https://github.com/wwqshengtang/MyGoogleTest/blob/main/imag/21.jpg)
 
 
 
